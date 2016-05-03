@@ -96,6 +96,8 @@ namespace Doppelchecker
                     var shipIdLockedIndex = shipModel.LockedMemberShipsId.IndexOf(ship.Id);
                     if (shipIdLockedIndex < 0 && ship.IsLocked) shipModel.LockedMemberShipsId.Add(ship.Id);
                     if (shipIdLockedIndex >= 0 && !ship.IsLocked) shipModel.LockedMemberShipsId.Remove(ship.Id);
+
+                    if (ship.Level > shipModel.MaxLevel) shipModel.MaxLevel = ship.Level;
                 }
             }
         }

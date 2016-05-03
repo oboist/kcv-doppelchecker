@@ -154,6 +154,26 @@ namespace Doppelchecker.Models
         }
         #endregion
 
+        #region MaxLevel変更通知プロパティ
+        private int _maxLevel;
+
+        /// <summary>
+        /// 最高レベル
+        /// </summary>
+        public int MaxLevel
+        {
+            get
+            { return _maxLevel; }
+            set
+            {
+                if (_maxLevel == value)
+                    return;
+                _maxLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
         #region MemberShipsId変更通知プロパティ
         private ObservableSynchronizedCollection<int> _memberShipsId;
 

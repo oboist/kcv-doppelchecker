@@ -119,6 +119,16 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
+                        <GridViewColumn Header="最高Lv" Width="60">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Ship.MaxLevel, StringFormat={}Lv.{0}}"
+                                                   Style="{DynamicResource EmphaticTextStyleKey}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                         <GridViewColumn Header="所属人数" Width="60">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
