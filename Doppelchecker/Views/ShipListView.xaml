@@ -105,8 +105,6 @@
                                     <StackPanel>
                                         <TextBlock Text="{Binding Ship.ShipTypeName, StringFormat={}{0}型}"
                                                    Style="{DynamicResource DefaultTextStyleKey}"/>
-                                        <TextBlock Text="{Binding Ship.ShipTypeNumber, StringFormat={}{0}番艦}"
-                                                   Style="{DynamicResource DetailTextStyleKey}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -115,7 +113,7 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <TextBlock Text="{Binding Ship.ShipName}"
-                                               Style="{DynamicResource EmphaticTextStyleKey}"/>
+                                               Foreground="{DynamicResource ActiveForegroundBrushKey}" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -124,7 +122,7 @@
                                 <DataTemplate>
                                     <StackPanel>
                                         <TextBlock Text="{Binding Ship.MaxLevel, StringFormat={}Lv.{0}}"
-                                                   Style="{DynamicResource EmphaticTextStyleKey}"/>
+                                                   Foreground="{DynamicResource ActiveForegroundBrushKey}" />
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -134,7 +132,7 @@
                                 <DataTemplate>
                                     <StackPanel>
                                         <TextBlock Text="{Binding Ship.MemberShipsId.Count, StringFormat={}{0}人}"
-                                                   Style="{DynamicResource EmphaticTextStyleKey}"/>
+                                                   Style="{DynamicResource DefaultTextStyleKey}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -144,7 +142,7 @@
                                 <DataTemplate>
                                     <StackPanel>
                                         <TextBlock Text="{Binding Ship.LockedMemberShipsId.Count, StringFormat={}{0}人}"
-                                                   Style="{DynamicResource EmphaticTextStyleKey}"/>
+                                                   Foreground="{DynamicResource ActiveForegroundBrushKey}" />
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
