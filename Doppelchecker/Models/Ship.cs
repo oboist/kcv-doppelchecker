@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using CsvHelper.Configuration;
+﻿using CsvHelper.Configuration;
 using Livet;
 
 namespace Doppelchecker.Models
@@ -207,6 +206,68 @@ namespace Doppelchecker.Models
             }
         }
         #endregion
+
+        #region RemodelLevel変更通知プロパティ
+        private int? _remodelLevel;
+
+        /// <summary>
+        /// 第一次改装レベル
+        /// </summary>
+        public int? RemodelLevel
+        {
+            get
+            { return _remodelLevel; }
+            set
+            { 
+                if (_remodelLevel == value)
+                    return;
+                _remodelLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
+        #region SecondRemodelLevel変更通知プロパティ
+        private int? _secondRemodelLevel;
+
+        /// <summary>
+        /// 第二次改装レベル
+        /// </summary>
+        public int? SecondRemodelLevel
+        {
+            get
+            { return _secondRemodelLevel; }
+            set
+            {
+                if (_secondRemodelLevel == value)
+                    return;
+                _secondRemodelLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
+        #region ThirdRemodelLevel変更通知プロパティ
+        private int? _thirdRemodelLevel;
+
+        /// <summary>
+        /// 最終改装レベル
+        /// Only effective when remodel will be done more then twice
+        /// e.g. Chitose, Chiyoda and Kasumi
+        /// </summary>
+        public int? ThirdRemodelLevel
+        {
+            get
+            { return _thirdRemodelLevel; }
+            set
+            {
+                if (_thirdRemodelLevel == value)
+                    return;
+                _thirdRemodelLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
     }
 
     public sealed class ShipMap : CsvClassMap<Ship>
@@ -219,6 +280,9 @@ namespace Doppelchecker.Models
             Map(m => m.ShipName).Index(3);
             Map(m => m.ShipNameVariation).Index(4);
             Map(m => m.IsImplemented).Index(5);
+            Map(m => m.RemodelLevel).Index(6);
+            Map(m => m.SecondRemodelLevel).Index(7);
+            Map(m => m.ThirdRemodelLevel).Index(8);
         }
     }
 }
