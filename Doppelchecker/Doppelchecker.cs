@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
@@ -20,7 +21,7 @@ namespace Doppelchecker
 {
     [ExportMetadata("Title", "Doppelchecker")]
     [ExportMetadata("Description", "艦娘の所属状況を表示します。")]
-    [ExportMetadata("Version", "0.5.0")]
+    [ExportMetadata("Version", "0.5.1")]
     [ExportMetadata("Author", "@hgzr")]
     [ExportMetadata("Guid", "E2FBF552-0797-464B-BB01-B39A6571C4F9")]
     [Export(typeof(IPlugin))]
@@ -51,8 +52,7 @@ namespace Doppelchecker
                 var records = csv.GetRecords<Ship>();
                 foreach (var record in records)
                 {
-                    var ship = new ShipViewModel();
-                    ship.Ship = record;
+                    var ship = new ShipViewModel {Ship = record};
                     if (ship.Ship.IsImplemented)
                     {
                         _viewModel.ShipList.Add(ship);
@@ -70,35 +70,32 @@ namespace Doppelchecker
 
         public void ShipSubscribe(IEnumerable<Grabacr07.KanColleWrapper.Models.Ship> homeportShips)
         {
-            var shipViewModels = _viewModel.ShipList.AsEnumerable();
-            var splitChar = new[] {'改', '甲', '航'};
-
             foreach (var ship in homeportShips)
             {
                 var shipName = ship.Info.Name;
+                
+                // Variation name is mostly "" not nil and need length check or will be true
+                var matchedEnumerable = _viewModel.ShipList.Where(
+                    x => shipName.StartsWith(x.Ship.ShipName) ||
+                    (x.Ship.ShipNameVariation.Length > 0 && shipName.StartsWith(x.Ship.ShipNameVariation))).Select(x => x);
 
-                // want "pure" ship name so need to delete suffix
-                var splitIndex = shipName.IndexOfAny(splitChar);
-                // workaround for "Prinz Eugen改"
-                splitIndex = splitIndex == -1 ? shipName.IndexOf(' ') : splitIndex;
+                var matchedList = matchedEnumerable as ShipViewModel[] ?? matchedEnumerable.ToArray();
+                
+                if (!matchedList.Any()) continue;
 
-                var purifiedShipName = splitIndex >= 0 ? shipName.Substring(0, splitIndex) : shipName;
-                var shipViewModelList = _viewModel.ShipList.Where(x => x.Ship.ShipName == purifiedShipName || x.Ship.ShipNameVariation == purifiedShipName).Select(x => x);
-                if (shipViewModelList.Any())
-                {
-                    var shipViewModel = shipViewModelList.First();
-                    var shipModel = shipViewModel.Ship;
-                    shipModel.IsMember = true;
+                // Add to counter list
+                var shipViewModel = matchedList.First();
+                var shipModel = shipViewModel.Ship;
+                shipModel.IsMember = true;
 
-                    var shipIdIndex = shipModel.MemberShipsId.IndexOf(ship.Id);
-                    if (shipIdIndex < 0) shipModel.MemberShipsId.Add(ship.Id);
+                var shipIdIndex = shipModel.MemberShipsId.IndexOf(ship.Id);
+                if (shipIdIndex < 0) shipModel.MemberShipsId.Add(ship.Id);
 
-                    var shipIdLockedIndex = shipModel.LockedMemberShipsId.IndexOf(ship.Id);
-                    if (shipIdLockedIndex < 0 && ship.IsLocked) shipModel.LockedMemberShipsId.Add(ship.Id);
-                    if (shipIdLockedIndex >= 0 && !ship.IsLocked) shipModel.LockedMemberShipsId.Remove(ship.Id);
+                var shipIdLockedIndex = shipModel.LockedMemberShipsId.IndexOf(ship.Id);
+                if (shipIdLockedIndex < 0 && ship.IsLocked) shipModel.LockedMemberShipsId.Add(ship.Id);
+                if (shipIdLockedIndex >= 0 && !ship.IsLocked) shipModel.LockedMemberShipsId.Remove(ship.Id);
 
-                    if (ship.Level > shipModel.MaxLevel) shipModel.MaxLevel = ship.Level;
-                }
+                if (ship.Level > shipModel.MaxLevel) shipModel.MaxLevel = ship.Level;
             }
         }
 
