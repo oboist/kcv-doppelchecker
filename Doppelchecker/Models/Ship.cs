@@ -251,9 +251,7 @@ namespace Doppelchecker.Models
         private int? _thirdRemodelLevel;
 
         /// <summary>
-        /// 最終改装レベル
-        /// Only effective when remodel will be done more then twice
-        /// e.g. Chitose, Chiyoda and Kasumi
+        /// 第三次改装レベル
         /// </summary>
         public int? ThirdRemodelLevel
         {
@@ -264,6 +262,48 @@ namespace Doppelchecker.Models
                 if (_thirdRemodelLevel == value)
                     return;
                 _thirdRemodelLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
+        #region FourthRemodelLevel変更通知プロパティ
+        private int? _fourthRemodelLevel;
+        
+        /// <summary>
+        /// 第四次改装レベル
+        /// </summary>
+        public int? FourthRemodelLevel
+        {
+            get
+            { return _fourthRemodelLevel; }
+            set
+            {
+                if (_fourthRemodelLevel == value)
+                    return;
+                _fourthRemodelLevel = value;
+                RaisePropertyChanged();
+            }
+        }
+        #endregion
+
+        #region FifthRemodelLevel変更通知プロパティ
+        private int? _fifthRemodelLevel;
+        
+        /// <summary>
+        /// 最終改装レベル
+        /// Only effective when remodel will be done more then twice
+        /// e.g. Chitose, Chiyoda and Kasumi
+        /// </summary>
+        public int? FifthRemodelLevel
+        {
+            get
+            { return _fifthRemodelLevel; }
+            set
+            {
+                if (_fifthRemodelLevel == value)
+                    return;
+                _fifthRemodelLevel = value;
                 RaisePropertyChanged();
             }
         }
@@ -283,6 +323,8 @@ namespace Doppelchecker.Models
             Map(m => m.RemodelLevel).Index(6);
             Map(m => m.SecondRemodelLevel).Index(7);
             Map(m => m.ThirdRemodelLevel).Index(8);
+            Map(m => m.FourthRemodelLevel).Index(9);
+            Map(m => m.FifthRemodelLevel).Index(10);
         }
     }
 }
