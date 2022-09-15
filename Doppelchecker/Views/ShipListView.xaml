@@ -99,7 +99,7 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        <GridViewColumn Header="艦型" Width="120">
+                        <GridViewColumn Header="艦型" Width="200">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel>
