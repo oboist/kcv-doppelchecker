@@ -1,12 +1,12 @@
-ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplemented,RemodelLevel,SecondRemodelLevel,ThirdRemodelLevel
+ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplemented,RemodelLevel,SecondRemodelLevel,ThirdRemodelLevel,FourthRemodelLevel,FifthRemodelLevel
 戦艦,長門,1,長門,,TRUE,30,88,
 戦艦,長門,2,陸奥,,TRUE,30,89,
 戦艦,扶桑,1,扶桑,,TRUE,20,80,
 戦艦,扶桑,2,山城,,TRUE,20,80,
 戦艦,伊勢,1,伊勢,,TRUE,10,88,
-戦艦,伊勢,2,日向,,TRUE,10,89,
-戦艦,大和,1,大和,,TRUE,60,,
-戦艦,大和,2,武蔵,,TRUE,40,,
+戦艦,伊勢,2,日向,,TRUE,10,90,
+戦艦,大和,1,大和,,TRUE,60,88,92
+戦艦,大和,2,武蔵,,TRUE,40,89,
 戦艦,大和,3,信濃,,FALSE,,,
 戦艦,大和,4,紀伊,,FALSE,,,
 巡洋戦艦,金剛,1,金剛,,TRUE,25,75,92
@@ -23,7 +23,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,Queen Elizabeth,4,Valiant,,FALSE,,,
 戦艦,Queen Elizabeth,5,Malaya,,FALSE,,,
 戦艦,Nelson,1,Nelson,,TRUE,48,,
-戦艦,Bismarck,1,Bismarck,,TRUE,30,50,75
+戦艦,Bismarck,1,Bismarck,Bismarck zwei,Bismarck drei,TRUE,30,50,75
 戦艦,Bismarck,2,Tirpitz,,FALSE,,,
 戦艦,Conte di Cavour,1,Conte di Cavour,Conte di Cavour nuovo,TRUE,48,74,
 戦艦,Vittorio Veneto,1,Vittorio Veneto,,FALSE,,,
@@ -34,7 +34,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,North Carolina,2,Washington,,TRUE,47,,
 戦艦,South Dakota,1,South Dakota,,TRUE,50,,
 戦艦,South Dakota,2,Indiana,,FALSE,,,
-戦艦,South Dakota,3,Massachusetts,,FALSE,,,
+戦艦,South Dakota,3,Massachusetts,,TRUE,48,,
 戦艦,South Dakota,4,Alabama,,FALSE,,,
 戦艦,Iowa,1,Iowa,,TRUE,50,,
 戦艦,Iowa,2,New Jersey,,FALSE,,,
@@ -43,7 +43,8 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,Iowa,5,Illinois,,FALSE,,,
 戦艦,Iowa,6,Kentucky,,FALSE,,,
 戦艦,Richelieu,1,Richelieu,,TRUE,45,,
-戦艦,Гангут,1,Гангут,Гангут два,TRUE,45,75,
+戦艦,Richelieu,2,Jean Bart,,TRUE,45,,
+戦艦,Гангут,1,Гангут,Октябрьская революция,Гангут два,TRUE,45,75,
 戦艦,Tennessee,1,Tennessee,,FALSE,,,
 戦艦,Tennessee,2,California,,FALSE,,,
 戦艦,Montana,1,Montana,,FALSE,,,
@@ -51,10 +52,8 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,Montana,3,Maine,,FALSE,,,
 戦艦,Montana,4,New Hampshire,,FALSE,,,
 戦艦,Montana,5,Louisiana,,FALSE,,,
-
-
 正規空母,赤城,1,赤城,,TRUE,30,90,92
-正規空母,加賀,1,加賀,,TRUE,30,,
+正規空母,加賀,1,加賀,,TRUE,30,82,84
 正規空母,蒼龍,1,蒼龍,,TRUE,30,78,
 正規空母,飛龍,1,飛龍,,TRUE,30,77,
 正規空母,翔鶴,1,翔鶴,,TRUE,30,80,88
@@ -78,15 +77,17 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 正規空母,Ark Royal,1,Ark Royal,,TRUE,45,,
 装甲空母,大鳳,1,大鳳,,TRUE,40,,
 正規空母,Illustrious,2,Victorious,,TRUE,45,,
+正規空母,Ranger,1,Ranger,,TRUE,45,,
 軽空母,鳳翔,1,鳳翔,,TRUE,25,,
 軽空母,飛鷹,1,飛鷹,,TRUE,25,,
 軽空母,飛鷹,2,隼鷹,,TRUE,25,80,
 軽空母,春日丸,1,春日丸,大鷹,TRUE,30,60,85
-軽空母,大鷹,2,雲鷹,,FALSE,,,
+軽空母,大鷹,2,雲鷹,,TRUE,33,62,85
 軽空母,大鷹,3,冲鷹,,FALSE,,,
 軽空母,大鷹,4,神鷹,,TRUE,60,85,
 軽空母,海鷹,2,海鷹,,FALSE,,,
 軽空母,Casablanca,19,Gambier Bay,,TRUE,45,73,
+軽空母,Independence,6,Langley,,TRUE,50,,
 軽空母,龍驤,1,龍驤,,TRUE,25,75,
 軽空母,祥鳳,1,祥鳳,,TRUE,25,,
 軽空母,祥鳳,2,瑞鳳,,TRUE,25,,
@@ -130,7 +131,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 防空巡洋艦,大峰,1,大峰,,FALSE,,,
 軽巡洋艦,天龍,1,天龍,,TRUE,20,84,
 軽巡洋艦,天龍,2,龍田,,TRUE,20,80,
-軽巡洋艦,球磨,1,球磨,,TRUE,20,,
+軽巡洋艦,球磨,1,球磨,,TRUE,20,88,
 軽巡洋艦,球磨,2,多摩,,TRUE,20,70,
 軽巡洋艦,球磨,3,北上,,TRUE,10,50,
 軽巡洋艦,球磨,4,大井,,TRUE,10,50,
@@ -141,13 +142,13 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 軽巡洋艦,長良,4,由良,,TRUE,20,77,
 軽巡洋艦,長良,5,鬼怒,,TRUE,17,75,
 軽巡洋艦,長良,6,阿武隈,,TRUE,17,75,
-軽巡洋艦,夕張,1,夕張,,TRUE,25,84,86
+軽巡洋艦,夕張,1,夕張,,TRUE,25,84,86,88
 軽巡洋艦,川内,1,川内,,TRUE,20,60,
 軽巡洋艦,川内,2,神通,,TRUE,20,60,
 軽巡洋艦,川内,3,那珂,,TRUE,20,48,
 軽巡洋艦,阿賀野,1,阿賀野,,TRUE,35,,
 軽巡洋艦,阿賀野,2,能代,能代改二,TRUE,35,85,
-軽巡洋艦,阿賀野,3,矢矧,矢矧改二乙,TRUE,35,90,
+軽巡洋艦,阿賀野,3,矢矧,矢矧改二乙,TRUE,35,88,90,
 軽巡洋艦,阿賀野,4,酒匂,,TRUE,35,,
 軽巡洋艦,大淀,1,大淀,,TRUE,35,,
 軽巡洋艦,大淀,2,仁淀,,FALSE,,,
@@ -206,7 +207,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 駆逐艦,綾波,2,敷波,,TRUE,20,80,
 駆逐艦,綾波,3,朝霧,,FALSE,,,
 駆逐艦,綾波,4,夕霧,,FALSE,,,
-駆逐艦,綾波,5,天霧,,TRUE,35,89,
+駆逐艦,綾波,5,天霧,,TRUE,35,84,89,
 駆逐艦,綾波,6,狭霧,,TRUE,30,,
 駆逐艦,綾波,7,朧,,TRUE,20,,
 駆逐艦,綾波,8,曙,,TRUE,20,82,
@@ -238,7 +239,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 駆逐艦,朝潮,4,荒潮,,TRUE,20,67,
 駆逐艦,朝潮,5,朝雲,,TRUE,35,,
 駆逐艦,朝潮,6,山雲,,TRUE,35,,
-駆逐艦,朝潮,7,夏雲,,FALSE,,,
+駆逐艦,朝潮,7,夏雲,,TRUE,38,,
 駆逐艦,朝潮,8,峯雲,,TRUE,,,
 駆逐艦,朝潮,9,霰,,TRUE,20,63,
 駆逐艦,朝潮,10,霞,,TRUE,20,75,88
@@ -325,7 +326,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 駆逐艦,Ташкент,1,Ташкент,,TRUE,50,,
 駆逐艦,Fletcher,445,Fletcher,,TRUE,55,88,90
 駆逐艦,Fletcher,557,Johnston,,TRUE,55,,
-護衛駆逐艦,John C.Butler,413,Samuel B.Roberts,,TRUE,55,78,
+護衛駆逐艦,John C.Butler,413,Samuel B.Roberts,,TRUE,50,78,
 海防艦,占守,1,占守,,TRUE,40,,
 海防艦,占守,2,国後,,TRUE,40,,
 海防艦,占守,3,八丈,,TRUE,40,,
@@ -363,6 +364,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 海防艦,日振,9,波太,,FALSE,,,
 海防艦,日振,10,大津,,FALSE,,,
 海防艦,日振,11,友知,,FALSE,,,
+海防艦,鵜来,1,鵜来,,TRUE,43,,
 海防艦,丁,2,第四号海防艦,,TRUE,35,,
 海防艦,丁,15,第三〇号海防艦,,TRUE,35,,
 潜水艦,海大VI,1,伊168,,TRUE,50,,
@@ -374,25 +376,26 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 潜水艦,潜高,1,伊201,,TRUE,55,,
 潜水艦,潜高,3,伊203,,TRUE,55,,
 潜水艦,UボートIXC,41,U-511,呂500,TRUE,35,55,
-潜水艦,Guglielmo Marconi,4,Luigi Torelli,伊504,TRUE,30,40,55
+潜水艦,Guglielmo Marconi,4,Luigi Torelli,UIT-25,伊504,TRUE,30,40,55
 潜水艦,三式潜航輸送艇,0,まるゆ,,TRUE,20,,
 潜水艦,Gato,227,Scamp,,TRUE,50,,
 潜水艦,巡潜甲型改二,1,伊13,,TRUE,45,,
 潜水艦,巡潜甲型改二,2,伊14,,TRUE,45,,
 潜水空母,潜特,1,伊400,,TRUE,37,,
 潜水空母,潜特,2,伊401,,TRUE,35,,
-水上機母艦,神威,1,神威,,TRUE,35,60,
-水上機母艦,千歳,1,千歳,,TRUE,10,15,50
-水上機母艦,千歳,2,千代田,,TRUE,10,15,50
+水上機母艦,千歳,1,千歳,千歳甲,千歳航,TRUE,10,12,15,35,50
+水上機母艦,千歳,2,千代田,千代田甲,千代田航,TRUE,10,12,15,35,50
 水上機母艦,瑞穂,1,瑞穂,,TRUE,40,,
 水上機母艦,日進,1,日進,,TRUE,40,60,
 水上機母艦,秋津洲,1,秋津洲,,TRUE,35,,
 水上機母艦,C.Teste,1,Commandant Teste,,TRUE,40,,
 潜水母艦,迅鯨,1,迅鯨,,TRUE,45,,
 潜水母艦,迅鯨,2,長鯨,,TRUE,47,,
-潜水母艦,大鯨,1,大鯨,龍鳳,TRUE,25,50,
-給油艦,改風早,1,速吸,,TRUE,25,,
-特務艦,耐氷型雑用運用艦,1,宗谷,宗谷(灯台補給艦),TRUE,60,,
+潜水母艦,大鯨,1,大鯨,龍鳳,TRUE,25,50,80,88
+補給艦,神威,1,神威,神威改母,TRUE,35,60,
+補給艦,改風早,1,速吸,,TRUE,25,,
+特務艦,耐氷型雑用運用艦,1,宗谷,,TRUE,60,,
 工作艦,明石,1,明石,明石改,TRUE,35,,
 揚陸艦,陸軍特種船(R1),1,神州丸,,TRUE,48,,
 揚陸艦,特種船丙,1,あきつ丸,,TRUE,25,,
+特設護衛空母,特2TL,1,山汐丸,,TRUE,48,,
