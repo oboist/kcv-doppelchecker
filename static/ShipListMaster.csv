@@ -118,7 +118,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 重巡洋艦,Northampton,4,Chicago,,FALSE,50,,
 重巡洋艦,Northampton,5,Houston,,TRUE,50,,
 重巡洋艦,Northampton,6,Augusta,,FALSE,50,,
-重巡洋艦,最上,1,最上,,TRUE,10,,
+重巡洋艦,最上,1,最上,,TRUE,10,80,90
 重巡洋艦,最上,2,三隈,,TRUE,30,,
 重巡洋艦,最上,3,鈴谷,,TRUE,35,84,88
 重巡洋艦,最上,4,熊野,,TRUE,35,84,88
