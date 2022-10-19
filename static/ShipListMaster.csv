@@ -23,7 +23,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,Queen Elizabeth,4,Valiant,,FALSE,,,
 戦艦,Queen Elizabeth,5,Malaya,,FALSE,,,
 戦艦,Nelson,1,Nelson,,TRUE,48,,
-戦艦,Bismarck,1,Bismarck,Bismarck zwei,Bismarck drei,TRUE,30,50,75
+戦艦,Bismarck,1,Bismarck,Bismarck drei,TRUE,30,50,75
 戦艦,Bismarck,2,Tirpitz,,FALSE,,,
 戦艦,Conte di Cavour,1,Conte di Cavour,Conte di Cavour nuovo,TRUE,48,74,
 戦艦,Vittorio Veneto,1,Vittorio Veneto,,FALSE,,,
@@ -44,7 +44,7 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 戦艦,Iowa,6,Kentucky,,FALSE,,,
 戦艦,Richelieu,1,Richelieu,,TRUE,45,,
 戦艦,Richelieu,2,Jean Bart,,TRUE,45,,
-戦艦,Гангут,1,Гангут,Октябрьская революция,Гангут два,TRUE,45,75,
+戦艦,Гангут,1,Гангут,Гангут два,TRUE,45,75,
 戦艦,Tennessee,1,Tennessee,,FALSE,,,
 戦艦,Tennessee,2,California,,FALSE,,,
 戦艦,Montana,1,Montana,,FALSE,,,
@@ -147,8 +147,8 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 軽巡洋艦,川内,2,神通,,TRUE,20,60,
 軽巡洋艦,川内,3,那珂,,TRUE,20,48,
 軽巡洋艦,阿賀野,1,阿賀野,,TRUE,35,,
-軽巡洋艦,阿賀野,2,能代,能代改二,TRUE,35,85,
-軽巡洋艦,阿賀野,3,矢矧,矢矧改二乙,TRUE,35,88,90,
+軽巡洋艦,阿賀野,2,能代,,TRUE,35,85,
+軽巡洋艦,阿賀野,3,矢矧,,TRUE,35,88,90,
 軽巡洋艦,阿賀野,4,酒匂,,TRUE,35,,
 軽巡洋艦,大淀,1,大淀,,TRUE,35,,
 軽巡洋艦,大淀,2,仁淀,,FALSE,,,
@@ -383,8 +383,8 @@ ShipClassName,ShipTypeName,ShipTypeNumber,ShipName,ShipNameVariation,IsImplement
 潜水艦,巡潜甲型改二,2,伊14,,TRUE,45,,
 潜水空母,潜特,1,伊400,,TRUE,37,,
 潜水空母,潜特,2,伊401,,TRUE,35,,
-水上機母艦,千歳,1,千歳,千歳甲,千歳航,TRUE,10,12,15,35,50
-水上機母艦,千歳,2,千代田,千代田甲,千代田航,TRUE,10,12,15,35,50
+水上機母艦,千歳,1,千歳,千歳航,TRUE,10,12,15,35,50
+水上機母艦,千歳,2,千代田,千代田航,TRUE,10,12,15,35,50
 水上機母艦,瑞穂,1,瑞穂,,TRUE,40,,
 水上機母艦,日進,1,日進,,TRUE,40,60,
 水上機母艦,秋津洲,1,秋津洲,,TRUE,35,,
